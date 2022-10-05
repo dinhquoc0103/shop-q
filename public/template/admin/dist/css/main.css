@@ -1,0 +1,7 @@
+#admin-product-table_wrapper #admin-product-table,
+#admin-menu-table-1_wrapper #admin-menu-1-table,
+#admin-menu-table-2_wrapper #admin-menu-table-2,
+#admin-slider-table_wrapper #admin-slider-table,
+#admin-purchase-order-table_wrapper #admin-purchase-order-table {
+    width: 1200px !important;
+}
