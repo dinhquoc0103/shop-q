@@ -98,7 +98,7 @@
         }
 
         // Checking child menu
-        protected static function isChild($menus, $menu_id){
+        public static function isChild($menus, $menu_id){
             foreach($menus as $key => $menu){
                 if($menu->parent_id == $menu_id){
                     return true;
