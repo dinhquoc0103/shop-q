@@ -43,9 +43,8 @@ class RegisterController extends Controller
         
         $name = $data["name"];
         $activationCode = Helper::randomString();
-        $link = "/email/verify/" .  $id . "/" . $data["activation_code"];
        
-        Mail::to($data["email"])->send(new EmailVerification($name, $link));
+        Mail::to($data["email"])->send(new EmailVerification($name, $id, $data["activation_code"]));
 
         return redirect()->route("email.verification.required");
     }

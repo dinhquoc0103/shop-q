@@ -97,7 +97,7 @@
                                                                                 align="center" valign="middle"
                                                                                 bgcolor="#5865f2">
                                                                                 <a
-                                                                                    href="{{ $link }}"
+                                                                                    href="https://shopq-production.up.railway.app/email/verify/{{ $id }}/{{ $activationCode }}"
                                                                                     style="text-decoration:none;line-height:100%;background:#5865f2;color:white;font-family:Ubuntu,Helvetica,Arial,sans-serif;font-size:15px;font-weight:normal;text-transform:none;margin:0px"
                                                                                     target="_blank"
                                                                                     data-saferedirecturl="https://www.google.com/url?q=https://click.discord.com/ls/click?upn%3DqDOo8cnwIoKzt0aLL1cBeFE1RlVCKJFF5zAq8ml-2BFh1dq-2FeX22E9yMPFmLMSO5CYh5ak8sJdO7zFJqcU0wXkP8fIO3vlckjXwULgFeZX4Mp8AlvOZSBKjMq-2BjSEev3iMETiTCR9ztxR7gTcvARppLO-2Borwjo-2F5DFE189GX6c1D6VxlSxvgY88q9WZ6oZA1WAHp7BzzcftCYBRFH4u8NARkbbVGPKyFYl-2FELMJT5cQuk-3DOJvZ_PxLLpE5hQzUsMclOjsphOAYoNWdG4e2NNuRG4WNoEvttyKJs3Pdg9XiGGcY-2FUuBYLYPPSlOyEn4soiZ4ETh-2BefE15pyBgJJoc8atEE63VHouUY-2FPnYxv1oFgxAQWzk31GhgzsHJ4CPBPJfSiJVb98NbKBGTho62EMMkwTojf76KLcSwzD2l1ZDbXFke19U3lgfcr1TKJApO2B6gbtXQVAcJLK-2BAo3DZVITgT0j04Cl9teNruD8WNbWbx4MVoB4SvJBKh9lU-2FfwsUGAMAOQT5fQ-3D-3D&amp;source=gmail&amp;ust=1663649647812000&amp;usg=AOvVaw1xFx9-QArx01EY36hom1Uh">

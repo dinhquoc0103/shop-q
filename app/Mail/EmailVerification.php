@@ -12,16 +12,18 @@ class EmailVerification extends Mailable
     use Queueable, SerializesModels;
 
     protected $name;
-    protected $link;
+    protected $id;
+    protected $activationCode;
     /**
      * Create a new message instance.
      *
      * @return void
      */
-    public function __construct($name, $link)
+    public function __construct($name, $id, $activationCode)
     {
         $this->name = $name;
-        $this->link = $link;
+        $this->id = $id;
+        $this->activationCode = $activationCode;
     }
 
     /**
@@ -33,7 +35,8 @@ class EmailVerification extends Mailable
     {
         return $this->view('emails.EmailVerification')->with([
             "name" => $this->name,
-            "link" => $this->link,
+            "id" => $this->id,
+            "activationCode" => $this->activationCode,
         ]);
     }
 }

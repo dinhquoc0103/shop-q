@@ -152,7 +152,7 @@ Route::middleware(['guest'])->group(function () {
     Route::get('account/login', [LoginController::class, 'index'])->name('login.page');
     Route::post('account/login', [LoginController::class, 'login']);
 
-    Route::get('/email/verify/{id}/{activationCode}', [MailController::class, 'verify']);
+    Route::get('email/verify/{id}/{activationCode}', [MailController::class, 'verify']);
 });
 
 use App\Http\Controllers\TestController;
