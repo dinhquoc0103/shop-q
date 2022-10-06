@@ -48,8 +48,11 @@ class SliderService
     public function deleteSliderRow($id)
     {
         $slider = Slider::where('id', $id)->first();
-
-        Helper::deleteFileUploaded($slider->thumb);
+        $tempArray = explode("/", $slider->thumb);
+        $tempArray = explode(".", $tempArray[array_key_last($tempArray)]);
+        $imgId = $tempArray[array_key_first($tempArray)];
+        $pathFile = "sliders/" . $imgId;
+        Helper::deleteFileUploaded($pathFile);
 
         return $slider->delete();
     }

@@ -95,8 +95,11 @@ class ProductService
     public function deleteProductRow($id)
     {
         $product = Product::where('id', $id)->first();
-        
-        Helper::deleteFileUploaded($product->thumb);
+        $tempArray = explode("/", $product->thumb);
+        $tempArray = explode(".", $tempArray[array_key_last($tempArray)]);
+        $imgId = $tempArray[array_key_first($tempArray)];
+        $pathFile = "products/" . $imgId;
+        Helper::deleteFileUploaded($pathFile);
 
         return $product->delete();
     }

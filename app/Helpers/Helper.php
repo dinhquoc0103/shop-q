@@ -45,11 +45,19 @@
         }
 
         // Delete image saved when deleting product row in admin
-        public static function deleteFileUploaded($filePath)
+        // Delete image in cloudinary
+        public static function deleteFileUploaded($pathFile)
         {
-            $filePath = str_replace("storage", "public", $filePath);
-            Storage::delete($filePath);
+            cloudinary()->destroy($pathFile);
         }
+        // Delete image in storage folder 
+        // public static function deleteFileUploaded($filePath)
+        // {
+        //     $filePath = str_replace("storage", "public", $filePath);
+        //     Storage::delete($filePath);
+        // }
+
+        
 
         // Render menu on desktop header and mobile in client
         public static function renderHtmlMenus($menus, $device ,$parent_id = 0)

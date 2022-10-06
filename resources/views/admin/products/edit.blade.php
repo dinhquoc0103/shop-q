@@ -131,6 +131,10 @@
                     <a href="{{ route('listProduct') }}" class="btn btn-primary">Trở Về Danh Sách</a>
                 </div>
             </form>
+
+            <form action="" name="form-hidden-product" id="form-hidden">
+                <input type="hidden" name="archive-folder-name" value="products">
+            </form>
         </div>
     </div>
 @endsection
