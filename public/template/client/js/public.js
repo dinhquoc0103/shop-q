@@ -15,6 +15,8 @@ var sizeArray = ["M", "L", "XL", "XXL"];
 $(document).ready(function() {
     // Add to cart
     $("#add-product-detail").on('click', "#add-to-cart", function() {
+        let id = $(this).data("id");
+        let price = $(this).data("price");
         let size =  $("#select-size").val();
         if(!sizeArray.includes(size)){
             let index = $("#select-size").prop('selectedIndex');
@@ -26,6 +28,8 @@ $(document).ready(function() {
             type: 'POST',
             dataType: 'JSON',
             data: {
+                'id': id,
+                'price': price,
                 'size': size,
                 'quantity': quantity
             },

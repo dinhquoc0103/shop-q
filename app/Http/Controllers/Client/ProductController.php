@@ -76,8 +76,6 @@ class ProductController extends Controller
         $breadcrumb = self::createBreadcrumbString($this->menuService->getMenuRowById($product->menu_id)) . "+" . strtoupper($product->name);
         // Total number of a product (1 product)
         $numProduct = $this->productService->countQuantityEachProduct($product->id);
-        session(["product_id" => $product->id]);
-        session(["product_price" => $product->price * ((100 - $product->discount) / 100)]);
         
         return view('client.products.detail', [
             'title' => $product->name,

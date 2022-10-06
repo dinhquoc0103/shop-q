@@ -135,7 +135,7 @@
                                         </div>
 
                                         <div id="add-product-detail">
-                                            <button id="add-to-cart"
+                                            <button id="add-to-cart" data-id="{{ $product->id }}" data-price="{{  $product->price * ((100 - $product->discount) / 100) }}"
                                                 class="add-to-carts flex-c-m stext-101 cl0 size-101 bg1  hov-btn1 p-lr-15 trans-04 ">
                                                 THÊM VÀO GIỎ
                                             </button>

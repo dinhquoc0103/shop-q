@@ -47,8 +47,8 @@ class CartController extends Controller
     //Add product to cart
     public function addToCart(Request $request)
     {   
-        $id = session('product_id');
-        $price = session("product_price");
+        $id = $request->input('id');
+        $price = $request->input('price');
         $size = $request->input('size');
         $quantity = (int)$request->input('quantity');
         $cart = Session::get('cart');
