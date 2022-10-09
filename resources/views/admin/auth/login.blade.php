@@ -18,7 +18,7 @@
                 @include('admin.components.alert')
                 <form action="/admin/users/login/store" method="post">
                     <div class="input-group mb-1">
-                        <input type="email" name="email" class="form-control" placeholder="Email">
+                        <input type="email" value="dinhquoc0103@gmail.com" name="email" class="form-control" placeholder="Email">
                         <div class="input-group-append">
                             <div class="input-group-text">
                                 <span class="fas fa-envelope"></span>
@@ -29,7 +29,7 @@
                         <span class="text-danger ml-2 mb-1 d-block">{{ $message }}</span>
                     @enderror
                     <div class="input-group mb-1">
-                        <input type="password" name="password" class="form-control" placeholder="Password">
+                        <input type="password" value="12345678" name="password" class="form-control" placeholder="Password">
                         <div class="input-group-append">
                             <div class="input-group-text">
                                 <span class="fas fa-lock"></span>
