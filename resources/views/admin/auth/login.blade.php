@@ -13,7 +13,7 @@
         <!-- /.login-logo -->
         <div class="card">
             <div class="card-body login-card-body">
-                <p class="login-box-msg">Sign in to start your session</p>
+                <p class="login-box-msg">Đăng nhập vào trang quản trị shop Q</p>
 
                 @include('admin.components.alert')
                 <form action="/admin/users/login/store" method="post">
