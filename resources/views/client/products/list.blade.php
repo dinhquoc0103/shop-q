@@ -31,7 +31,7 @@
                     </button>
                 </div> --}}
 
-                <div class="filter flex-w">  
+                <div class="filter flex-w">
                     <div class="form-group m-r-20">
                         {{-- <label for="exampleFormControlSelect1">Example select</label> --}}
                         <select class="form-control" id="collection-filter-price">
@@ -61,8 +61,6 @@
                         </select>
                     </div>
                 </div>
-
-                
 
             </div>
 
