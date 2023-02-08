@@ -4,6 +4,7 @@ namespace App\Http\Controllers\Client;
 
 use App\Http\Controllers\Controller;
 use App\Http\Services\Client\CartService;
+use App\Http\Services\Client\PurchaseOrderService;
 use App\Helpers\Helper;
 use Illuminate\Support\Facades\Session;
 use Illuminate\Support\Arr;
@@ -17,9 +18,12 @@ use App\Mail\EmailOrderComplete;
 class CartController extends Controller
 {
     protected $cartService;
+    protected $purchaseOrderService;
 
-    public function __construct(CartService $cartService){
+    public function __construct(CartService $cartService, PurchaseOrderService $purchaseOrderService){
         $this->cartService = $cartService;
+        $this->purchaseOrderService = $purchaseOrderService;
+
     }
 
     private function setTotalProductsInCartSession($cart)
@@ -192,11 +196,12 @@ class CartController extends Controller
         $purchaseOrderData["code"] = Helper::randomString(18);
         $purchaseOrderData["total_price"] = Session::get("total_price");
 
-        $result = $this->cartService->insertPurchaseOrderRow($purchaseOrderData);
+        $purchaseOrder = $this->cartService->insertPurchaseOrderRow($purchaseOrderData);
 
-        if($result)
+        if($purchaseOrder)
         {   
-            Mail::to($purchaseOrderData["email"])->send(new EmailOrderComplete($purchaseOrderData["code"]));
+            $products = $this->purchaseOrderService->getProductsInPurchaseOrder($purchaseOrder);
+            Mail::to($purchaseOrderData["email"])->send(new EmailOrderComplete($purchaseOrder, $products));
             session()->forget(["cart", "total_products_in_cart", "total_price"]);
             return redirect()->route("order.complete.page");
         }

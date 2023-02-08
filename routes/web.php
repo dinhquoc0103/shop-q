@@ -155,8 +155,12 @@ Route::middleware(['guest'])->group(function () {
     Route::get('email/verify/{id}/{activationCode}', [MailController::class, 'verify']);
 });
 
+Route::get("emailOrderComplete", function (){
+    return view("emails.emailOrderComplete");
+});
+
+
 use App\Http\Controllers\TestController;
 
 Route::get("test", [TestController::class, 'index']);
 Route::post("test", [TestController::class, 'post']);
-

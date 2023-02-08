@@ -50,7 +50,8 @@ class CartService
     {
         try
         {
-            $purchaseOrderId = PurchaseOrder::create($purchaseOrderData)->id;
+            $purchaseOrder = PurchaseOrder::create($purchaseOrderData);
+            $purchaseOrderId = $purchaseOrder->id;
 
             $cart = Session::get("cart");
             $productPurchaseOrderData = [];
@@ -70,12 +71,13 @@ class CartService
             }
 
             DB::table("product_purchase_order")->insert($productPurchaseOrderData);
+            
+            return $purchaseOrder;
         }
         catch(QueryException $error)
         {
             dd($error);
             return false;
         }
-        return true;
     }
 }   

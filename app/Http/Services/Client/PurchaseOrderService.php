@@ -16,4 +16,18 @@ class PurchaseOrderService
     {
         return PurchaseOrder::where("user_id", $user_id)->orderByDesc('id')->get();
     }    
+
+    // Get products in purchase order
+    public function getProductsInPurchaseOrder($purchaseOrder)
+    {
+        $products = collect();
+        foreach($purchaseOrder->products as $key => $product)
+        {
+            $product->quantity = $product->pivot->quantity;
+            $product->size = $product->pivot->size;
+            $product->total_price = $product->pivot->total_price;
+            $products->push($product);
+        }
+        return $products;
+    }
 }

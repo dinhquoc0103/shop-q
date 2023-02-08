@@ -11,15 +11,18 @@ class EmailOrderComplete extends Mailable
 {
     use Queueable, SerializesModels;
 
-    protected $code;
+    protected $purchaseOrderData;
+    protected $products;
+    
     /**
      * Create a new message instance.
      *
      * @return void
      */
-    public function __construct($code)
+    public function __construct($purchaseOrder, $products)
     {
-        $this->code = $code;
+        $this->purchaseOrder = $purchaseOrder;
+        $this->products = $products;
     }
 
     /**
@@ -29,8 +32,10 @@ class EmailOrderComplete extends Mailable
      */
     public function build()
     {
-        return $this->view("emails.emailOrderComplete")->with([
-            "code" => $this->code
-        ]);
+        return $this->subject("Đặt Hàng Thành Công")
+                    ->view("emails.emailOrderComplete")->with([
+                            "purchaseOrder" => $this->purchaseOrder,
+                            "products" => $this->products,
+                        ]);
     }
 }
