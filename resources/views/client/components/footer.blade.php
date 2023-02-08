@@ -60,7 +60,8 @@
                 </h4>
 
                 <p class="stext-107 cl7 size-201">
-                    Có câu hỏi nào không? Hãy cho chúng tôi biết tại cửa hàng tại tầng 4, Dĩ An, Quận 9, NY 10018 hoặc gọi cho chúng tôi theo số (+1) 96 716 6879
+                    Có câu hỏi nào không? Hãy cho chúng tôi biết tại cửa hàng tại tầng 4, Dĩ An, Quận 9, NY 10018 hoặc
+                    gọi cho chúng tôi theo số (+1) 96 716 6879
                 </p>
 
                 <div class="p-t-27">
@@ -126,9 +127,10 @@
                 <!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
                 <script>
                     document.write(new Date().getFullYear());
-                </script> All rights reserved | Made with <i class="fa fa-heart-o" aria-hidden="true"></i>
+                </script> All rights reserved | Made with <i class="fa fa-heart-o"
+                    aria-hidden="true"></i>
                 by <a href="" target="_blank">Quốc</a>;
-            
+
                 <!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
 
             </p>
@@ -154,28 +156,28 @@
 <script src="/template/client/vendor/bootstrap/js/popper.js"></script>
 <script src="/template/client/vendor/bootstrap/js/bootstrap.min.js"></script>
 <!--===============================================================================================-->
-<script src="/template/client/vendor/select2/select2.min.js"></script>
-<script>
+{{-- <script src="/template/client/vendor/select2/select2.min.js"></script> --}}
+{{-- <script>
     $(".js-select2").each(function() {
         $(this).select2({
             minimumResultsForSearch: 20,
             dropdownParent: $(this).next('.dropDownSelect2')
         });
     })
-</script>
+</script> --}}
 <!--===============================================================================================-->
-<script src="/template/client/vendor/daterangepicker/moment.min.js"></script>
-<script src="/template/client/vendor/daterangepicker/daterangepicker.js"></script>
+{{-- <script src="/template/client/vendor/daterangepicker/moment.min.js"></script>
+<script src="/template/client/vendor/daterangepicker/daterangepicker.js"></script> --}}
 <!--===============================================================================================-->
 <script src="/template/client/vendor/slick/slick.min.js"></script>
 <script src="/template/client/js/slick-custom.js"></script>
 <!--===============================================================================================-->
-<script src="/template/client/vendor/parallax100/parallax100.js"></script>
+{{-- <script src="/template/client/vendor/parallax100/parallax100.js"></script>
 <script>
     $('.parallax100').parallax100();
-</script>
+</script> --}}
 <!--===============================================================================================-->
-<script src="/template/client/vendor/MagnificPopup/jquery.magnific-popup.min.js"></script>
+{{-- <script src="/template/client/vendor/MagnificPopup/jquery.magnific-popup.min.js"></script>
 <script>
     $('.gallery-lb').each(function() { // the containers for all your galleries
         $(this).magnificPopup({
@@ -187,7 +189,7 @@
             mainClass: 'mfp-fade'
         });
     });
-</script>
+</script> --}}
 <!--===============================================================================================-->
 <script src="/template/client/vendor/isotope/isotope.pkgd.min.js"></script>
 <!--===============================================================================================-->
@@ -228,7 +230,7 @@
     });
 </script>
 <!--===============================================================================================-->
-<script src="/template/client/vendor/perfect-scrollbar/perfect-scrollbar.min.js"></script>
+{{-- <script src="/template/client/vendor/perfect-scrollbar/perfect-scrollbar.min.js"></script>
 <script>
     $('.js-pscroll').each(function() {
         $(this).css('position', 'relative');
@@ -243,7 +245,7 @@
             ps.update();
         })
     });
-</script>
+</script> --}}
 <!--===============================================================================================-->
-<script src="/template/client/js/main.js"></script>
+<script src="/template/client/js/main.min.js"></script>
 <script src="/template/client/js/public.js"></script>

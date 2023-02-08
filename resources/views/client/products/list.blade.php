@@ -73,5 +73,5 @@
 @endsection
 
 @section('footer')
-    <script src="/template/client/js/product.js"></script>
+    <script src="/template/client/js/product.min.js"></script>
 @endsection

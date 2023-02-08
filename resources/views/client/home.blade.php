@@ -7,7 +7,7 @@
     <!-- Product -->
     <section class="bg0 p-t-24 p-b-140">
         <div class="container">
-            
+
             <div class="p-b-46">
                 <h3 class="ltext-103 cl5 text-center">
                     SẢN PHẨM MỚI
@@ -450,5 +450,5 @@
 @endsection
 
 @section('footer')
-    <script src="/template/client/js/home.js"></script>
+    <script src="/template/client/js/home.min.js"></script>
 @endsection

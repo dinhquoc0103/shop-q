@@ -16,7 +16,7 @@
 <!--===============================================================================================-->
 <link rel="stylesheet" type="text/css" href="/template/client/vendor/css-hamburgers/hamburgers.min.css">
 <!--===============================================================================================-->
-{{-- <link rel="stylesheet" type="text/css" href="/template/client/vendor/animsition/css/animsition.min.css"> --}}
+<link rel="stylesheet" type="text/css" href="/template/client/vendor/animsition/css/animsition.min.css">
 <!--===============================================================================================-->
 {{-- <link rel="stylesheet" type="text/css" href="/template/client/vendor/select2/select2.min.css"> --}}
 <!--===============================================================================================-->
