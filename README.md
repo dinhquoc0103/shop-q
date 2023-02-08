@@ -5,7 +5,8 @@ Website selling local brand clothes full responsive.
 You can access by this link: https://shopq-production.up.railway.app/
 
 ## This project was built with
-Laravel 8, JavaScript, JQuery, Bootstrap 4, DataTables, Ajax,... 
+1. Laravel 8, JavaScript, JQuery, Bootstrap 4, DataTables, Ajax,... 
+2. Store image at: https://cloudinary.com/
 
 ## Preview with images
 
